@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Speed Typing Master</title>
+  <link rel="stylesheet" href="TG.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Righteous&family=Orbitron:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script defer src="TG.js"></script>
+</head>
+<body id="body">
+  <div id="main">
+    <h1>Speed Typing Master</h1>
+    
+    <div id="game-info">
+      <div id="level-info">Level: <span id="current-level">1</span></div>
+      <div id="timer">Time: <span id="time-left">60</span>s</div>
+    </div>
+
+    <div id="display"></div>
+    
+    <div id="score">
+      <div id="wright">
+        <p>Correct<br><span id="wri">0</span></p>
+        <div class="stats-label">WPM: <span id="wpm">0</span></div>
+      </div>
+      <div id="miss">
+        <p>Missed<br><span id="missed">0</span></p>
+        <div class="stats-label">Accuracy: <span id="accuracy">0</span>%</div>
+      </div>
+      <div id="wrong">
+        <p>Wrong<br><span id="wro">0</span></p>
+        <div class="stats-label">Streak: <span id="streak">0</span></div>
+      </div>
+    </div>
+
+    <div class="progress-container">
+      <progress id="prg" value="0" max="100"></progress>
+      <div class="speed-control">
+        <label for="range">Word Speed</label>
+        <input type="range" id="range" value="100" max="1000">
+      </div>
+    </div>
+
+    <div class="input-container">
+      <input type="text" id="inputField" placeholder="Type the word and press Enter" autofocus>
+    </div>
+
+    <div class="controls">
+      <button class="game-button" id="startBtn">Start Game</button>
+      <button class="game-button" id="resetBtn">Reset Game</button>
+    </div>
+
+    <div id="player-stats">
+      <h3>📊 Current Game Stats</h3>
+      <div class="stats-container">
+        <div class="stat-item">
+          <div class="stat-value" id="current-wpm">0</div>
+          <div class="stat-label">WPM</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-value" id="current-accuracy">0%</div>
+          <div class="stat-label">Accuracy</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-value" id="current-level">Easy</div>
+          <div class="stat-label">Level</div>
+        </div>
+      </div>
+    </div>
+
+    <div id="high-scores">
+      <h3>🏆 High Scores</h3>
+      <ol id="score-list"></ol>
+    </div>
+  </div>
+</body>
+</html>
